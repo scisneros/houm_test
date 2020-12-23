@@ -7,7 +7,9 @@ function App() {
     <div className="App">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
         </div>
       </header>
       <Pokedex/>
