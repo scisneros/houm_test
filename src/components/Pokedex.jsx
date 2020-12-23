@@ -141,7 +141,7 @@ class Pokedex extends React.Component {
           stats[stat.stat.name] = stat.base_stat
           adjStats[stat.stat.name] = (Math.pow(stat.base_stat / 255, 0.5))
         }
-        if (sum >= 525) {
+        if (sum >= 525 && !isLoading) {
           isTop = true
         }
       }
