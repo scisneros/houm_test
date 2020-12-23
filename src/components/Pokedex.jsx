@@ -162,7 +162,7 @@ class Pokedex extends React.Component {
 
     return (
       <div className="pokedex">
-        <SearchBar handleSearchByName={this.handleSearchByName} />
+        <SearchBar handleSearchByName={this.handleSearchByName} disabled={isLoading}/>
         <div className={"pk-cards" + (isLoading ? " loading-disable" : "")}>
           {pokemonList.map((pokemon) => (
             <PokeCard pokemon={pokemon}/>
