@@ -73,7 +73,7 @@
 .pk-top-tooltip {
   position: absolute;
   line-height: 1rem;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #ff5500;
   background-color: white;
@@ -313,8 +313,15 @@
   flex: 0 0 calc(33.33333% - 8px);
   text-align: center;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  background-color: #8686861c;
   margin: 0 4px;
+  color: #aaa;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1px 4px;
 }
 
 .pk-measure-title, .pk-abilities-title {
@@ -324,16 +331,6 @@
 
 .pk-card:hover .pk-measure-title, .pk-card:hover .pk-abilities-title {
   color: #ff5500;
-}
-
-.pk-ability-name {
-  color: #bbb;
-  text-transform: capitalize;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 4px;
 }
 
 .pk-measure-value {
