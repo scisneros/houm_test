@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/houm_test/static/css/main.eaf61660.chunk.css",
-    "main.js": "/houm_test/static/js/main.f7102a51.chunk.js",
-    "main.js.map": "/houm_test/static/js/main.f7102a51.chunk.js.map",
-    "runtime-main.js": "/houm_test/static/js/runtime-main.8de10360.js",
-    "runtime-main.js.map": "/houm_test/static/js/runtime-main.8de10360.js.map",
+    "main.js": "/houm_test/static/js/main.3295ef44.chunk.js",
+    "main.js.map": "/houm_test/static/js/main.3295ef44.chunk.js.map",
+    "runtime-main.js": "/houm_test/static/js/runtime-main.74805c6a.js",
+    "runtime-main.js.map": "/houm_test/static/js/runtime-main.74805c6a.js.map",
     "static/css/2.43b2b750.chunk.css": "/houm_test/static/css/2.43b2b750.chunk.css",
-    "static/js/2.d7931cf9.chunk.js": "/houm_test/static/js/2.d7931cf9.chunk.js",
-    "static/js/2.d7931cf9.chunk.js.map": "/houm_test/static/js/2.d7931cf9.chunk.js.map",
-    "static/js/3.ce604f8b.chunk.js": "/houm_test/static/js/3.ce604f8b.chunk.js",
-    "static/js/3.ce604f8b.chunk.js.map": "/houm_test/static/js/3.ce604f8b.chunk.js.map",
+    "static/js/2.1b4a2646.chunk.js": "/houm_test/static/js/2.1b4a2646.chunk.js",
+    "static/js/2.1b4a2646.chunk.js.map": "/houm_test/static/js/2.1b4a2646.chunk.js.map",
+    "static/js/3.cb4c7d93.chunk.js": "/houm_test/static/js/3.cb4c7d93.chunk.js",
+    "static/js/3.cb4c7d93.chunk.js.map": "/houm_test/static/js/3.cb4c7d93.chunk.js.map",
     "index.html": "/houm_test/index.html",
     "static/css/2.43b2b750.chunk.css.map": "/houm_test/static/css/2.43b2b750.chunk.css.map",
     "static/css/main.eaf61660.chunk.css.map": "/houm_test/static/css/main.eaf61660.chunk.css.map",
-    "static/js/2.d7931cf9.chunk.js.LICENSE.txt": "/houm_test/static/js/2.d7931cf9.chunk.js.LICENSE.txt",
+    "static/js/2.1b4a2646.chunk.js.LICENSE.txt": "/houm_test/static/js/2.1b4a2646.chunk.js.LICENSE.txt",
     "static/media/Logo PokeHoum White.c821ea63.png": "/houm_test/static/media/Logo PokeHoum White.c821ea63.png",
     "static/media/atk.69d4be4b.svg": "/houm_test/static/media/atk.69d4be4b.svg",
     "static/media/def.ea00919f.svg": "/houm_test/static/media/def.ea00919f.svg",
@@ -25,10 +25,10 @@
     "static/media/star.04a28689.svg": "/houm_test/static/media/star.04a28689.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8de10360.js",
+    "static/js/runtime-main.74805c6a.js",
     "static/css/2.43b2b750.chunk.css",
-    "static/js/2.d7931cf9.chunk.js",
+    "static/js/2.1b4a2646.chunk.js",
     "static/css/main.eaf61660.chunk.css",
-    "static/js/main.f7102a51.chunk.js"
+    "static/js/main.3295ef44.chunk.js"
   ]
 }
