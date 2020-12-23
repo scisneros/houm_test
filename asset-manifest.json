@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/houm_test/static/css/main.fa102b3b.chunk.css",
-    "main.js": "/houm_test/static/js/main.4cce2227.chunk.js",
-    "main.js.map": "/houm_test/static/js/main.4cce2227.chunk.js.map",
-    "runtime-main.js": "/houm_test/static/js/runtime-main.3b40e0f6.js",
-    "runtime-main.js.map": "/houm_test/static/js/runtime-main.3b40e0f6.js.map",
+    "main.css": "/houm_test/static/css/main.eaf61660.chunk.css",
+    "main.js": "/houm_test/static/js/main.57c832ad.chunk.js",
+    "main.js.map": "/houm_test/static/js/main.57c832ad.chunk.js.map",
+    "runtime-main.js": "/houm_test/static/js/runtime-main.8de10360.js",
+    "runtime-main.js.map": "/houm_test/static/js/runtime-main.8de10360.js.map",
     "static/css/2.43b2b750.chunk.css": "/houm_test/static/css/2.43b2b750.chunk.css",
-    "static/js/2.fa8fa345.chunk.js": "/houm_test/static/js/2.fa8fa345.chunk.js",
-    "static/js/2.fa8fa345.chunk.js.map": "/houm_test/static/js/2.fa8fa345.chunk.js.map",
-    "static/js/3.a14813a6.chunk.js": "/houm_test/static/js/3.a14813a6.chunk.js",
-    "static/js/3.a14813a6.chunk.js.map": "/houm_test/static/js/3.a14813a6.chunk.js.map",
+    "static/js/2.d7931cf9.chunk.js": "/houm_test/static/js/2.d7931cf9.chunk.js",
+    "static/js/2.d7931cf9.chunk.js.map": "/houm_test/static/js/2.d7931cf9.chunk.js.map",
+    "static/js/3.ce604f8b.chunk.js": "/houm_test/static/js/3.ce604f8b.chunk.js",
+    "static/js/3.ce604f8b.chunk.js.map": "/houm_test/static/js/3.ce604f8b.chunk.js.map",
     "index.html": "/houm_test/index.html",
     "static/css/2.43b2b750.chunk.css.map": "/houm_test/static/css/2.43b2b750.chunk.css.map",
-    "static/css/main.fa102b3b.chunk.css.map": "/houm_test/static/css/main.fa102b3b.chunk.css.map",
-    "static/js/2.fa8fa345.chunk.js.LICENSE.txt": "/houm_test/static/js/2.fa8fa345.chunk.js.LICENSE.txt",
+    "static/css/main.eaf61660.chunk.css.map": "/houm_test/static/css/main.eaf61660.chunk.css.map",
+    "static/js/2.d7931cf9.chunk.js.LICENSE.txt": "/houm_test/static/js/2.d7931cf9.chunk.js.LICENSE.txt",
     "static/media/Logo PokeHoum White.c821ea63.png": "/houm_test/static/media/Logo PokeHoum White.c821ea63.png",
     "static/media/atk.69d4be4b.svg": "/houm_test/static/media/atk.69d4be4b.svg",
     "static/media/def.ea00919f.svg": "/houm_test/static/media/def.ea00919f.svg",
+    "static/media/search.93c3a39f.svg": "/houm_test/static/media/search.93c3a39f.svg",
     "static/media/spatk.862fc5ad.svg": "/houm_test/static/media/spatk.862fc5ad.svg",
     "static/media/spdef.23a9e6da.svg": "/houm_test/static/media/spdef.23a9e6da.svg",
     "static/media/speed.9d8ebc8c.svg": "/houm_test/static/media/speed.9d8ebc8c.svg",
@@ -24,10 +25,10 @@
     "static/media/star.04a28689.svg": "/houm_test/static/media/star.04a28689.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b40e0f6.js",
+    "static/js/runtime-main.8de10360.js",
     "static/css/2.43b2b750.chunk.css",
-    "static/js/2.fa8fa345.chunk.js",
-    "static/css/main.fa102b3b.chunk.css",
-    "static/js/main.4cce2227.chunk.js"
+    "static/js/2.d7931cf9.chunk.js",
+    "static/css/main.eaf61660.chunk.css",
+    "static/js/main.57c832ad.chunk.js"
   ]
 }
