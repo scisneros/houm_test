@@ -3,6 +3,7 @@ import React from 'react'
 // Components
 import Pagination from './Pagination/Pagination'
 import PokeCard from './PokeCard/PokeCard'
+import SearchBar from './SearchBar/SearchBar'
 // Assets
 import '../assets/styles/pokedex.css'
 import spritePlaceholder from '../assets/sprites/sprite-placeholder.png'
@@ -30,6 +31,7 @@ class Pokedex extends React.Component {
     }
 
     this.handlePageChange = this.handlePageChange.bind(this)
+    this.handleSearchByName = this.handleSearchByName.bind(this)
   }
 
   fetchAllPokemon(limit, offset) {
@@ -49,7 +51,28 @@ class Pokedex extends React.Component {
       })
     })
     .catch(error => {
-      this.setState({ pokemonFullResults: [] })
+      this.setState({ pokemonFullResults: [], currentTotal: 0, isLoading: false })
+      console.log(error)
+    })
+  }
+
+  fetchPokemonByName(name) {
+    this.setState({ isLoading: true })
+    window.scrollTo(0, 0);
+    const cleanName = name.toLowerCase().trim()
+    fetch(`https://pokeapi.co/api/v2/pokemon/${cleanName}`)
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        throw new Error(response.status.toString());
+      }
+    })
+    .then(data => {
+      this.setState({ pokemonFullResults: [data], currentTotal: 1, isLoading: false })
+    })
+    .catch(error => {
+      this.setState({ pokemonFullResults: [], currentTotal: 0, isLoading: false })
       console.log(error)
     })
   }
@@ -58,9 +81,17 @@ class Pokedex extends React.Component {
     this.setState({ currentPage: page })
   }
 
+  handleSearchByName(input) {
+    if (!input || input.length < 1) {
+      this.fetchAllPokemon(this.state.currentLimit, 0)
+    } else {
+      this.fetchPokemonByName(input)
+    }
+  }
+
   componentDidMount () {
     this.fetchAllPokemon(this.state.currentLimit, 0)
-    // this.setState({ pokemonFullResults: pkFixture })
+    // this.setState({ pokemonFullResults: pkFixture, isLoading: false })
   }
 
   componentDidUpdate (prevProps, prevState, snapshot) {
@@ -128,17 +159,23 @@ class Pokedex extends React.Component {
       }
     })
     const numberOfPages = Math.ceil(currentTotal / currentLimit)
+
     return (
       <div className="pokedex">
+        <SearchBar handleSearchByName={this.handleSearchByName} />
         <div className={"pk-cards" + (isLoading ? " loading-disable" : "")}>
           {pokemonList.map((pokemon) => (
             <PokeCard pokemon={pokemon}/>
           ))}
+          {pokemonList.length < 1 ?
+            <div className="no-results-message">
+              <p>No results found :(</p>
+              <p>You must give the exact Pokémon name or number (e.g. "Charizard", "Pikachu", "453").</p>
+            </div> : ""}
         </div>
         <Pagination totalPages={numberOfPages} activePage={currentPage}
                     handlePageChange={this.handlePageChange} disabled={isLoading}
-                    range={3}
-        />
+                    range={3} />
       </div>
     )
   }

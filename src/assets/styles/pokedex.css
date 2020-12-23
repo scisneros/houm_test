@@ -1,4 +1,7 @@
 .pokedex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 24px 8px;
 }
 
@@ -26,4 +29,8 @@
   .pokedex {
     padding: 32px;
   }
+}
+
+.no-results-message {
+  text-align: center;
 }

@@ -1,0 +1,22 @@
+.search-container {
+  width: 100%;
+  max-width: 24rem;
+  padding: 0 16px;
+  margin-bottom: 36px;
+}
+
+.icon-search {
+  width: 16px;
+  height: 16px;
+  fill: white;
+  margin-bottom: 3px;
+}
+
+.btn-search {
+  background-color: #ff5500;
+  border: none;
+}
+
+.btn-search:active, .btn-search:hover, .btn-search:focus {
+  background-color: #d54300 !important;
+}
