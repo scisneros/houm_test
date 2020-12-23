@@ -1,4 +1,4 @@
-import logo from './assets/Logo PokeHoum White.png';
+import logo from './assets/logos/Logo PokeHoum White.png';
 import './App.css';
 import Pokedex from './components/Pokedex'
 

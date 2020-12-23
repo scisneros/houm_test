@@ -5,7 +5,7 @@ import Pagination from './Pagination/Pagination'
 import PokeCard from './PokeCard/PokeCard'
 // Assets
 import '../assets/styles/pokedex.css'
-import spritePlaceholder from '../assets/sprite-placeholder.png'
+import spritePlaceholder from '../assets/sprites/sprite-placeholder.png'
 // Fixture
 import pkFixture from '../fixtures/pk'
 
