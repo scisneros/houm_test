@@ -35,7 +35,6 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const { searchText } = this.state
     const { disabled } = this.props
     return (
       <div className="search-container">

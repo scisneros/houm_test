@@ -7,7 +7,6 @@ import { ReactComponent as IconDef } from '../../assets/icons/def.svg';
 import { ReactComponent as IconSpAtk } from '../../assets/icons/spatk.svg';
 import { ReactComponent as IconSpDef } from '../../assets/icons/spdef.svg';
 import { ReactComponent as IconSpd } from '../../assets/icons/speed.svg';
-import { ReactComponent as IconStar } from '../../assets/icons/star.svg'
 
 class StatBar extends React.Component {
   renderIcon(stat) {

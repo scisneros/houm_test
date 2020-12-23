@@ -8,7 +8,7 @@ import SearchBar from './SearchBar/SearchBar'
 import '../assets/styles/pokedex.css'
 import spritePlaceholder from '../assets/sprites/sprite-placeholder.png'
 // Fixture
-import pkFixture from '../fixtures/pk'
+// import pkFixture from '../fixtures/pk'
 
 
 
@@ -19,7 +19,7 @@ class Pokedex extends React.Component {
     let statsList = []
     for (const stat of ["hp", "attack", "defense", "special-attack", "special-defense", "speed"])
       statsList.push({base_stat: 0, stat: {name: stat}})
-    for (const _ in [...Array(20).keys()]) {
+    for (let i = 0; i < 20; i++) {
       initialList.push({stats: statsList})
     }
     this.state = {
@@ -168,7 +168,7 @@ class Pokedex extends React.Component {
                     range={3} />
         <div className={"pk-cards" + (isLoading ? " loading-disable" : "")}>
           {pokemonList.map((pokemon, index) => (
-            <PokeCard key={pokemon.number+"-"+index} pokemon={pokemon}/>
+            <PokeCard key={index} pokemon={pokemon}/>
           ))}
           {pokemonList.length < 1 ?
             <div className="no-results-message">
