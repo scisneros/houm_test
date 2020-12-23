@@ -14,8 +14,15 @@ import pkFixture from '../fixtures/pk'
 class Pokedex extends React.Component {
   constructor(props) {
     super(props)
+    let initialList = []
+    let statsList = []
+    for (const stat of ["hp", "attack", "defense", "special-attack", "special-defense", "speed"])
+      statsList.push({base_stat: 0, stat: {name: stat}})
+    for (const i in [...Array(20).keys()]) {
+      initialList.push({stats: statsList})
+    }
     this.state = {
-      pokemonFullResults: [],
+      pokemonFullResults: initialList,
       currentLimit: 20,
       currentPage: 1,
       currentTotal: 0,
@@ -27,6 +34,7 @@ class Pokedex extends React.Component {
 
   fetchAllPokemon(limit, offset) {
     this.setState({ isLoading: true })
+    window.scrollTo(0, 0);
     fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`)
     .then(response => response.json())
     .then(initialData => {
@@ -36,7 +44,7 @@ class Pokedex extends React.Component {
       }
       Promise.all(promises).then((results) => {
         Promise.all(results.map(res => res.json())).then(fullData => {
-          this.setState({ pokemonFullResults: fullData, currentTotal: initialData.count, isLoading: false },() => console.log(this.state.pokemonFullResults))
+          this.setState({ pokemonFullResults: fullData, currentTotal: initialData.count, isLoading: false })
         })
       })
     })
@@ -46,20 +54,7 @@ class Pokedex extends React.Component {
     })
   }
 
-  fetchPokemonInfo(list) {
-    let promises = []
-    for (const pokemon of list) {
-      promises.push(fetch(pokemon.url))
-    }
-    Promise.all(promises).then((results) => {
-      Promise.all(results.map(res => res.json())).then(data => {
-        this.setState({ pokemonFullResults: data }, () => console.log(this.state.pokemonFullResults))
-      })
-    })
-  }
-
   handlePageChange(page) {
-    console.log(page)
     this.setState({ currentPage: page })
   }
 
@@ -120,7 +115,7 @@ class Pokedex extends React.Component {
         }
       }
       return {
-        name: pk.name,
+        name: pk.name || "-",
         sprite: sprite,
         number: pk.id || "-",
         types: types,
