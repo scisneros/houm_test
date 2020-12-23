@@ -4,12 +4,10 @@ import PaginationEllipsis from './PaginationEllipsis'
 import '../../assets/styles/pagination.css'
 
 class Pagination extends React.Component {
-  constructor (props) {
-    super(props);
-  }
 
   render () {
     const { totalPages, activePage, handlePageChange, disabled } = this.props
+    if (totalPages <= 1) return "";
     const range = this.props.range || 2
     let items = []
     if (activePage - range > 1) {
@@ -23,7 +21,6 @@ class Pagination extends React.Component {
       items.push("...")
       items.push(totalPages)
     }
-    console.log(items)
     return (
       <div className="pagination-container">
         {items.map((page) => {
