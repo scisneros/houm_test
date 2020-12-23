@@ -1,19 +1,37 @@
-
-
 .pk-card-wrapper {
-  flex-grow: 0;
+  flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 20%;
-  max-width: 20%;
+  flex-basis: 300px;
+  min-width: 300px;
   box-sizing: border-box;
-  padding: 16px;
+  padding: 16px 8px;
 }
 
 .pk-card {
-  padding: 20px 20px 16px;
+  padding: 20px;
   cursor: pointer;
   flex-direction: column;
   border-radius: 12px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 350px) {
+  .pk-card-wrapper {
+    flex-basis: 328px;
+    min-width: 328px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pk-card-wrapper {
+    padding: 8px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pk-card-wrapper {
+    padding: 16px;
+  }
 }
 
 .pk-card:hover {
@@ -166,7 +184,7 @@
 
 .pk-stats-container {
   display: flex;
-  flex: 1 0 150px;
+  flex: 1 0;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 16px;
@@ -262,41 +280,68 @@
   opacity: 1;
 }
 
-.pk-details-container {
+.pk-measures-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: -8px 0;
+}
+
+.pk-measures-container p {
+  margin: 0 4px;
+}
+
+.pk-abilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+    margin-top: -12px;
   width: 100%;
 }
 
-.pk-detail {
-  display: flex;
-  flex: 1 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  line-height: 1.2em;
+.pk-abilities-title {
+  flex: 1 0 100%;
+  text-align: center;
+  margin-bottom: 4px;
 }
 
-.pk-detail-key {
+.pk-ability-name {
+  flex: 0 0 calc(33.33333% - 8px);
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pk-measure-title, .pk-abilities-title {
   color: #e69573;
-  font-size: 0.9rem;
-}
-
-.pk-detail-value {
-  color: #bbb;
-  text-transform: capitalize;
-  white-space: nowrap;
   font-size: 0.8rem;
 }
 
-.pk-card:hover .pk-detail-key {
+.pk-card:hover .pk-measure-title, .pk-card:hover .pk-abilities-title {
   color: #ff5500;
 }
 
-.pk-card:hover .pk-detail-value {
+.pk-ability-name {
+  color: #bbb;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+}
+
+.pk-measure-value {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.pk-card:hover .pk-measure-value, .pk-card:hover .pk-ability-name {
   color: #666;
 }
 

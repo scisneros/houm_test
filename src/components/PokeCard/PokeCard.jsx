@@ -38,21 +38,21 @@ class PokeCard extends React.Component {
             </div>
           </div>
           <div className="pk-section">
-            <div className="pk-details-container">
-              <div className="pk-detail">
-                <span className="pk-detail-key">Height</span>
-                <span className="pk-detail-value">{(pokemon.height / 10)+"m"}</span>
-              </div>
-              <div className="pk-detail">
-                <span className="pk-detail-key">Weight</span>
-                <span className="pk-detail-value">{(pokemon.weight / 10)+"kg"}</span>
-              </div>
-              <div className="pk-detail">
-                <span className="pk-detail-key">Abilities</span>
-                {pokemon.abilities.map((abil) =>
-                  <span className="pk-detail-value">{abil}</span>
-                )}
-              </div>
+            <div className="pk-measures-container">
+              <p className="pk-measure-title">Height</p>
+              <p className="pk-measure-value">{(pokemon.height / 10)+"m"}</p>
+            </div>
+            <div className="pk-measures-container">
+              <p className="pk-measure-title">Weight</p>
+              <p className="pk-measure-value">{(pokemon.weight / 10)+"kg"}</p>
+            </div>
+          </div>
+          <div className="pk-section">
+            <div className="pk-abilities-container">
+              <span className="pk-abilities-title">Abilities</span>
+              {pokemon.abilities.map((abil) =>
+                <span className="pk-ability-name">{abil}</span>
+              )}
             </div>
           </div>
         </div>
