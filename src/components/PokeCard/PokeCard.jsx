@@ -33,7 +33,7 @@ class PokeCard extends React.Component {
             </div>
             <div className="pk-stats-container">
               {Object.keys(pokemon.stats).map((stat) => {
-                return <StatBar stat={stat} value={pokemon.stats[stat]} percentage={pokemon.adjStats[stat]}/>
+                return <StatBar key={stat} stat={stat} value={pokemon.stats[stat]} percentage={pokemon.adjStats[stat]}/>
               })}
             </div>
           </div>
@@ -51,7 +51,7 @@ class PokeCard extends React.Component {
             <div className="pk-abilities-container">
               <span className="pk-abilities-title">Abilities</span>
               {pokemon.abilities.map((abil) =>
-                <span className="pk-ability-name" title={abil}>{abil}</span>
+                <span key={abil} className="pk-ability-name" title={abil}>{abil}</span>
               )}
             </div>
           </div>

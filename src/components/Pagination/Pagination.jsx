@@ -23,11 +23,11 @@ class Pagination extends React.Component {
     }
     return (
       <div className="pagination-container">
-        {items.map((page) => {
+        {items.map((page, index) => {
           if (page === "...") {
-            return <PaginationEllipsis />
+            return <PaginationEllipsis key={page+index}/>
           } else {
-            return <PaginationItem number={page} isActive={page === activePage}
+            return <PaginationItem key={page} number={page} isActive={page === activePage}
                                    onClick={disabled ? null : (e) => handlePageChange(page)}/>
           }
         })}

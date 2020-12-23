@@ -19,7 +19,7 @@ class Pokedex extends React.Component {
     let statsList = []
     for (const stat of ["hp", "attack", "defense", "special-attack", "special-defense", "speed"])
       statsList.push({base_stat: 0, stat: {name: stat}})
-    for (const i in [...Array(20).keys()]) {
+    for (const _ in [...Array(20).keys()]) {
       initialList.push({stats: statsList})
     }
     this.state = {
@@ -167,8 +167,8 @@ class Pokedex extends React.Component {
                     handlePageChange={this.handlePageChange} disabled={isLoading}
                     range={3} />
         <div className={"pk-cards" + (isLoading ? " loading-disable" : "")}>
-          {pokemonList.map((pokemon) => (
-            <PokeCard pokemon={pokemon}/>
+          {pokemonList.map((pokemon, index) => (
+            <PokeCard key={pokemon.number+"-"+index} pokemon={pokemon}/>
           ))}
           {pokemonList.length < 1 ?
             <div className="no-results-message">
