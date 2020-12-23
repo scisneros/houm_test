@@ -1,0 +1,31 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-item {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #ff5500;
+  color: #ff5500;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0px 4px;
+}
+
+.pagination-item:hover {
+  background-color: rgba(255,80,0,0.04);
+}
+
+.pagination-item.page-active {
+  background-color: #ff5500;
+  color: white;
+}
+
+.pagination-ellipsis {
+  border: none;
+  cursor: default;
+}

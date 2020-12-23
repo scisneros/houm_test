@@ -1,0 +1,15 @@
+.pokedex {
+  padding: 32px;
+}
+
+.pk-cards {
+  display: flex;
+  flex-wrap: wrap;
+  transition: filter 100ms ease-out, opacity 100ms ease-out;
+}
+
+.pk-cards.loading-disable {
+  filter: grayscale(1);
+  opacity: 0.75;
+  pointer-events: none;
+}
