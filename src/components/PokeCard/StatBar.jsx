@@ -30,22 +30,27 @@ class StatBar extends React.Component {
   }
 
   getAbbreviation(stat) {
-    switch (stat) {
-      case 'hp':
-       return 'HP'
-      case 'attack':
-        return 'ATK'
-      case 'defense':
-       return 'DEF'
-      case 'special-attack':
-        return 'SpATK'
-      case 'special-defense':
-        return 'SpDEF'
-      case 'speed':
-        return 'SPD'
-      default:
-        return null
+    const dict = {
+      'hp': 'HP',
+      'attack': 'ATK',
+      'defense': 'DEF',
+      'special-attack': 'SpATK',
+      'special-defense': 'SpDEF',
+      'speed': 'SPD',
     }
+    return dict[stat]
+  }
+
+  getFullName(stat) {
+    const dict = {
+      'hp': 'HP',
+      'attack': 'Attack',
+      'defense': 'Defense',
+      'special-attack': 'Special Attack',
+      'special-defense': 'Special Defense',
+      'speed': 'Speed',
+    }
+    return dict[stat]
   }
 
   render() {
@@ -61,7 +66,7 @@ class StatBar extends React.Component {
     const lightness = 50 - adjustment*15
     const backgroundColor = "hsl("+hue+"deg "+saturation*100+"% "+lightness+"%)"
     return (
-      <div className="pk-stat-wrapper">
+      <div className="pk-stat-wrapper" title={this.getFullName(stat)}>
         <div className="pk-stat-icon-wrapper">
           {this.renderIcon(stat)}
           <div className="pk-stat-tooltip">{this.getAbbreviation(stat)}</div>

@@ -51,7 +51,7 @@ class PokeCard extends React.Component {
             <div className="pk-abilities-container">
               <span className="pk-abilities-title">Abilities</span>
               {pokemon.abilities.map((abil) =>
-                <span className="pk-ability-name">{abil}</span>
+                <span className="pk-ability-name" title={abil}>{abil}</span>
               )}
             </div>
           </div>
