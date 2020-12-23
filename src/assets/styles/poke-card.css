@@ -19,6 +19,7 @@
   .pk-card-wrapper {
     flex-basis: 328px;
     min-width: 328px;
+    max-width: 500px;
   }
 }
 
@@ -159,7 +160,7 @@
 
 .pk-card:hover .pk-sprite-wrapper {
   border-color: transparent;
-  background-color: rgba(0,0,0,0.075);
+  background-color: rgba(0,0,0,0.05);
 }
 
 .pk-card.pk-top:hover .pk-sprite-wrapper {
